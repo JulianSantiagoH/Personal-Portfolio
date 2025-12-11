@@ -1,11 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="shortcut icon" href="./assets/favicon.svg" type="image/x-icon">
+    <title>Professional-Portfolio</title>
 </head>
+
 <body>
-    
+    <div class="container">
+        <div class="slidebar-container hidden-slidebar" id="slidebar">
+            <div class="header-menu button-slidebar-container">
+                <button class="burger-button" id="hiddenSlidebar"><img src="./assets/icons/burger-menu-icon.svg" alt="MenuButton"
+                        title="MenuButton"></button>
+            </div>
+            <div class="data-user-profile">
+                <div class="profile-container-slidebar">
+                    <img class="img-profile-slidebar" style="width: 100px;" src="./assets/img/pictureProfile.jpg" alt="">
+                </div>
+                <h1 class="title-profile-slidebar">Jhon Doe</h1>
+                <p class="description-profile-slidebar">Full Stack Developer</p>
+                <div class="border-profile-slidebar"></div>
+            </div>
+            <div class="nav-menu">
+                <button class="button-menu"><img class="icon-menu" src="./assets/icons/home-icon.svg" alt="Home" title="Home Image">Home</button>
+                <button class="button-menu"><img class="icon-menu" src="./assets/icons/about-icon.svg" alt="About me" title="About Image">About Me</button>
+                <button class="button-menu"><img class="icon-menu" src="./assets/icons/code-icon.svg" alt="Skills" title="Skills Image">Skills</button>
+                <button class="button-menu"><img class="icon-menu" src="./assets/icons/project-icon.svg" alt="Projects"
+                        title="Projects Image">Projects</button>
+            </div>
+
+        </div>
+        <div class="parent-container">
+            <header class="header-menu">
+                <button class="burger-button show-slidebar" id="showSlidebar"><img src="./assets/icons/burger-menu-icon.svg" alt="MenuButton"
+                        title="MenuButton"></button>
+            </header>
+            <main class="content-container">
+                <div class="content-container-child">
+                    <div class="img-container">
+                        <img class="img-profile" src="./assets/img/pictureProfile.jpg" alt="">
+                    </div>
+                    <h1 class="title-text">Jhon Doe</h1>
+                    <p class="text">Full Stack Developer</p>
+                    <button class="cv-button">Download CV</button>
+                </div>
+                <div class="content-container-child">
+                    <button class="contact-button"><img class="icons" src="./assets/icons/linkedin-icon.svg"
+                            alt=""></button>
+                    <button class="contact-button"><img class="icons" src="./assets/icons/github-icon.svg"
+                            alt=""></button>
+                    <button class="contact-button"><img class="icons" src="./assets/icons/mobile-icon.svg"
+                            alt=""></button>
+                    <button class="contact-button"><img class="icons" src="./assets/icons/mail-icon.svg"
+                            alt=""></button>
+                </div>
+                <div class="content-container-child">
+                    <h3 class="project-text">PINNED PROJECTS</h3>
+                    <article class="grid-container">
+                        <div class="grid-elements img-project-1">
+                            <p class="title-project">BriefCase</p>
+                            <p class="description-project">Lorem ipsum</p>
+                        </div>
+                        <div class="grid-elements img-project-2">
+                            <p class="title-project">BriefCase</p>
+                            <p class="description-project">Lorem ipsum</p>
+                        </div>
+                        <div class="grid-elements img-project-3">
+                            <p class="title-project">BriefCase</p>
+                            <p class="description-project">Lorem ipsum</p>
+                        </div>
+                        <div class="grid-elements img-project-4">
+                            <p class="title-project">BriefCase</p>
+                            <p class="description-project">Lorem ipsum</p>
+                        </div>
+                    </article>
+                </div>
+            </main>
+            <footer class="footer-container">
+                <p>© 2025 All Rights Reserved</p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="./js/slidebar.js"></script>
+
 </body>
+
 </html>

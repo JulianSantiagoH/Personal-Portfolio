@@ -1,0 +1,25 @@
+@font-face {
+  font-family: "Offside";
+  src: url("../assets/fonts/Offside-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../assets/fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2-variations"),
+       url("../assets/fonts/OpenSans-VariableFont_wdth,wght.woff2") format("woff2");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root{
+    --primary-color:#22D5C2;
+    --secundary-color:#212530;
+    --primary-text-color:#37E4D7;
+    --secundary-text-color:#F2F5FA;
+    --primary-button:#22D5C2;
+    --secundary-button:#303540;
+}
