@@ -1,3 +1,5 @@
+/* font family imported */
+
 @font-face {
   font-family: "Offside";
   src: url("../assets/fonts/Offside-Regular.woff2") format("woff2");
@@ -15,8 +17,12 @@
   font-display: swap;
 }
 
+/* color global variable */
+
 :root{
     --primary-color:#22D5C2;
+    --primary-color-light:#28ffea;
+    --primary-color-dark: #11796e;
     --secundary-color:#212530;
     --primary-text-color:#37E4D7;
     --secundary-text-color:#F2F5FA;

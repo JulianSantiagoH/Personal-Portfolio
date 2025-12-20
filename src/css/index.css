@@ -1,35 +1,12 @@
 @import url(./globalVariables.css);
 
-*{
-    margin: 0;
-}
-
 html,body{
     padding: 0;
     height: 100dvh;
     overflow-y: hidden;
 }
 
-body{
-    background-image: url(../assets/background/background.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-
-.container{
-    height: 100%;
-}
-
-
-.header-menu{
-    padding: 1.6vh;
-}
-
-.burger-button{
-    cursor: pointer;
-    width: 3.3rem;
-    height: 3.3rem;
-}
+/* Content Styles */
 
 .parent-container{
     height: 100%;
@@ -73,8 +50,18 @@ body{
     height: 2rem;
     margin-bottom: 10px;
     border-radius: 9px;
+    color: #FFFFFF;
 }
 
+.cv-button:hover{
+    background-color: var(--primary-color-light);
+    transition: 0.3s ease;
+    box-shadow: 0px 3px 10px var(--primary-color);
+}
+
+.cv-button:active{
+    background-color: var(--primary-color-dark);
+}
 
 .content-container-child:first-child{
     flex: 3;
@@ -100,6 +87,15 @@ body{
     height: 3rem;
 }
 
+.contact-button:hover{
+    transition: 0.3s ease;
+    background-color: var(--primary-color);
+}
+
+.contact-button:active{
+    background-color: var(--primary-color-dark);
+}
+
 .icons{
     width: 24px;
     height: 24px;
@@ -108,16 +104,19 @@ body{
 .content-container-child:last-child{
     display: flex;
     flex-direction: column;
+    text-align: center;
     width: 80dvw;
     flex: 4;
 }
+
+/* grid project styles */
 
 .project-text{
     font-family: "Open Sans";
     color:var(--primary-text-color);
     font-size: 1.2rem;
     align-self: flex-start;
-    margin: 1rem 1rem;
+    margin: 1rem 0;
 }
 
 .grid-container{
@@ -126,6 +125,7 @@ body{
     justify-items: flex-start;
     height: 100%;
     gap: 10px;
+    padding-bottom: 4rem;
     grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
 }
 
@@ -138,123 +138,52 @@ body{
     justify-content: center;
     background-size: cover;
     background-position: center;
+    cursor: pointer;
 }
 
 .img-project-1{
     background-image: url(../assets/img/example-project.png);
-
+    position: relative;
 }
+
 .img-project-2{
     background-image: url(../assets/img/example-project.png);
+    position: relative;
 }
 .img-project-3{
     background-image: url(../assets/img/example-project.png);
+    position: relative;
 }
 .img-project-4{
     background-image: url(../assets/img/example-project.png);
+    position: relative;
 }
 
+.grid-elements::before{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease;
+}
+
+.grid-elements:hover::before{
+    background-color: rgba(0, 0, 0, 0.45);
+}
+
+
 .title-project{
+    position: relative;
     color: #FFFFFF;
     margin-bottom: 0.3rem;
     margin-left: 1rem;
+    z-index: 2;
 }
 
 .description-project{
+    position: relative;
     color: #21A4D9;
     margin-left: 1rem;
-}
-
-.footer-container{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 1rem;
-    padding: 1rem;
-    color: var(--secundary-text-color);
-    background-color: var(--secundary-color);
-
-}
-
-
-/* Slidebar Styles */
-
-.slidebar-container{
-    position: absolute;
-    background-color: var(--secundary-color);
-    width: 60%;
-    height: 100%;
-}
-
-.hidden-slidebar{
-    display: none;
-}
-
-.button-slidebar-container{
-   display: flex;
-   justify-content: flex-end;
-}
-
-.data-user-profile{
-    display: flex;
-    flex-direction: column;
-    margin-top: 1.1rem;
-    align-items: center;
-}
-
-.nav-menu{
-    display: flex;
-    flex-direction: column;
-    gap: 23px;
-}
-
-.icon-menu{
-    width: 2.5rem;
-}
-
-.button-menu{
-    display: flex;
-    align-items: center;
-    color: var(--secundary-text-color);
-    justify-content: flex-start;
-    margin-left: 2rem;
-    gap: 1rem;
-}
-
-.img-profile-slidebar{
-    border: 3px solid var(--primary-color);
-    border-radius: 50px;
-}
-
-.title-profile-slidebar{
-    color: var(--primary-color);
-    font-weight: bold;
-}
-
-.description-profile-slidebar{
-    color: var(--secundary-text-color);
-    padding-bottom: 1.5rem;
-}
-
-.border-profile-slidebar{
-    width: 80%;
-    margin-bottom: 3rem;
-    border-bottom: 4px solid transparent;
-    border-image: linear-gradient(to right, transparent, #00eaff, transparent) 1;
-    box-shadow: 0px 5px 17px var(--primary-color);
-}
-
-
-.background-dark{
-    width: 40%;
-    height: 100%;
-    position: absolute;
-    right: 0;
-    z-index: 100;
-    background-color: #00000079;
-}
-
-button{
-    border: none;
-    background-color: transparent;
+    z-index: 2;
 }
