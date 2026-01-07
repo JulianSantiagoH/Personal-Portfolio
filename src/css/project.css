@@ -1,0 +1,92 @@
+@import url(./globalVariables.css);
+
+html{
+    box-sizing: border-box;
+    height: 100%;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+}
+
+.title-text{
+    color: var(--primary-text-color);
+    font-family: "Open Sans";
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.text{
+    color: var(--secundary-text-color);
+    font-family: "Offside";
+    font-size: 0.8rem;
+}
+
+.content-container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 2rem;
+}
+
+.buttons-filter-container{
+    display: flex;
+    justify-content: space-around;
+    margin: 2rem 0;
+}
+
+.button-filter{
+    background-color: var(--secundary-button);
+    padding: 10px;
+    border-radius: 9px;
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
+    grid-auto-rows: 10rem;
+    max-height: 40rem;
+    overflow-y: scroll;
+    gap: 10px;
+}
+
+.grid-elements{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left:10px;
+}
+
+.title-project{
+    position: relative;
+    color: #FFFFFF;
+    margin-bottom: 0.3rem;
+    margin-left: 1rem;
+    z-index: 2;
+}
+
+.description-project{
+    position: relative;
+    color: #21A4D9;
+    margin-left: 1rem;
+    z-index: 2;
+}
+.img-project-1,.img-project-2,.img-project-3,.img-project-4{
+    background-image: url(../assets/img/example-project.png);
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.grid-elements::before{
+    content: "";
+    position: absolute;
+    z-index: 1;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0);
+    transition: background-color 0.3s ease;
+}
+
+.grid-elements:hover::before{
+    background-color: rgba(0, 0, 0, 0.45);
+}
