@@ -43,6 +43,15 @@ body{
     margin: 2rem 0;
 }
 
+@media (min-width:800px){
+    .buttons-filter-container{
+        display: flex;
+        gap: 0.5rem;
+        max-width: 30%;
+        align-items: center;
+    }
+}
+
 .button-filter{
     background-color: var(--secundary-button);
     padding: 0.5rem;
